@@ -1,0 +1,32 @@
+<div class="container py-5">
+  <div class="row pt-5">
+    <div class="col-md-4">
+      <img class="w-100" [src]='imgPrefix+movieId.poster_path'>
+    </div>
+    <div class="col-md-8 py-2">
+      <h1>{{movieId.original_title}}</h1>
+      <p class="movie_tagLine">{{movieId.tagline}}</p>
+      <div class="genres col-md-12 my-3 px-0">
+        <span class="mr-3">{{movieId.genres[0].name}}</span>
+        <span class="mr-3">{{movieId.genres[1].name}}</span>
+      </div>
+      <div class="movieDetails py-3">
+        <p>
+          Vote : {{movieId.vote_average}}
+        </p>
+        <p>
+          Vote Count : {{movieId.vote_count}}
+        </p>
+        <p>
+          Popularity : {{movieId.popularity}}
+        </p>
+        <p>
+          Release Date : {{movieId.release_date}}
+        </p>
+      </div>
+      <h2 class="movieDetails">
+        {{movieId.overview}}
+      </h2>
+    </div>
+  </div>
+</div>
